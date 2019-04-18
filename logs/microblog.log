@@ -1,0 +1,38 @@
+2019-04-17 09:10:04,741 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:10:12,871 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:10:19,528 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:11:17,442 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:12:32,416 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:12:36,340 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:12:42,183 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:12:46,464 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:23:13,469 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:23:19,515 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:23:25,878 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:23:47,944 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
+2019-04-17 09:27:40,702 ERROR: Exception on /search [GET] [in /Users/hvosdt/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/hvosdt/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hvosdt/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hvosdt/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hvosdt/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/hvosdt/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hvosdt/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hvosdt/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/hvosdt/PythonProjects/microblog/app/main/routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "/Users/hvosdt/PythonProjects/microblog/app/models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/hvosdt/PythonProjects/microblog/app/search.py", line 26, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "/Users/hvosdt/PycharmProjects/microblog/venv/lib/python3.6/site-packages/elasticsearch/client/utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+TypeError: search() got an unexpected keyword argument 'doc_type'
+2019-04-17 12:45:40,410 INFO: Microblog startup [in /Users/hvosdt/PythonProjects/microblog/app/__init__.py:77]
